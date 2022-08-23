@@ -6,16 +6,17 @@
 /*   By: mpalkov <mpalkov@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 16:28:05 by mpalkov           #+#    #+#             */
-/*   Updated: 2022/07/14 16:38:09 by mpalkov          ###   ########.fr       */
+/*   Updated: 2022/08/23 16:29:30 by mpalkov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void	ft_putchar_fd(char c, int fd)
+int	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	if (write(fd, &c, sizeof(char)) != sizeof(char))
+		return (-1);
+	return (sizeof(char));
 }
 
 // As input variable c is of type char which is 1 byte,
