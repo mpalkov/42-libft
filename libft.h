@@ -6,7 +6,7 @@
 /*   By: mpalkov <mpalkov@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 12:44:10 by mpalkov           #+#    #+#             */
-/*   Updated: 2022/08/23 16:10:55 by mpalkov          ###   ########.fr       */
+/*   Updated: 2022/08/24 17:50:13 by mpalkov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
 
-
 // write to a file descriptor
 int		ft_putchar_fd(char c, int fd);
 int		ft_putstr_fd(char *s, int fd);
@@ -60,7 +59,7 @@ void	*ft_calloc(size_t nmbyte, size_t size);
 char	*ft_itoa(int n);
 void	*ft_memchr(const void *s, int c, size_t n);
 
-typedef struct	s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;

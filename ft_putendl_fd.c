@@ -6,7 +6,7 @@
 /*   By: mpalkov <mpalkov@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 16:56:17 by mpalkov           #+#    #+#             */
-/*   Updated: 2022/08/23 16:42:37 by mpalkov          ###   ########.fr       */
+/*   Updated: 2022/08/24 17:52:12 by mpalkov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_putendl_fd(char *s, int fd)
 		i++;
 	}
 	if (write(fd, "\n", sizeof(char)) != sizeof(char))
-			return (-1);
+		return (-1);
 	return (sizeof(char) * i);
 }
 
