@@ -12,6 +12,20 @@ C programming can be very tedious when one doesn’t have access to the highly u
 - the TESTS_etc/ directory contains all my personal garbage files used to test functions or certain behaviour in certain cases.
 
 # Versions
-## Git Push 22-Aug-2022 (V01) ##
-	- version I have submitted for evaluation and validated. Everything works correct according to the project tests.
-	- passed all Francinette STRICT test too.
+
+#### Git Push 01-Sept-2022 ####
+	- added ft_putchar.c to Makefile
+	- ft_putendl corrected arguments
+	- corrected - use ft_putchar_fd
+
+#### Git Push 29-Aug-2022 ####
+	- removed &. - ncompatible pointer types passing 'char **' to parameter of type 'char *';
+
+#### Git Push 23-Aug-2022 (V02) ####
+	- modified ft_put* fuctions to return int and return -1 on error.
+	- functions ft_put* write directly to STDOUT_FILENO fd. 
+	- Functions ft_put*_fd take file descriptor as arguent.
+	
+#### Git Push 22-Aug-2022 (V01) ####
+	- version submitted for evaluation and validated. Everything works correctly according to my peer and moulinette tests.
+	- passed all Francinette STRICT tests too.

@@ -6,7 +6,7 @@
 /*   By: mpalkov <mpalkov@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 12:24:16 by mpalkov           #+#    #+#             */
-/*   Updated: 2022/08/08 18:15:44 by mpalkov          ###   ########.fr       */
+/*   Updated: 2023/02/15 11:38:14 by mpalkov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ size_t	ft_strlen(const char *s)
 	i = 0;
 	if (!s)
 		return (0);
-	while (s[i] != 0)
-		i++;
+	while (s[i])
+		++i;
 	return (i);
 }
 

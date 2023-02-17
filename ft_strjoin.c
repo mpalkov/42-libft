@@ -6,7 +6,7 @@
 /*   By: mpalkov <mpalkov@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 12:51:08 by mpalkov           #+#    #+#             */
-/*   Updated: 2022/07/11 12:49:57 by mpalkov          ###   ########.fr       */
+/*   Updated: 2023/02/15 11:29:30 by mpalkov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len2 = ft_strlen(s2);
 	i = 0;
 	j = 0;
-	newstr = malloc(len1 + len2 + 1);
+	newstr = malloc(sizeof(char) * (len1 + len2 + 1));
 	if (!newstr)
-		return (0);
+		return (NULL);
 	while (i < len1)
 	{
 		newstr[i] = s1[i];

@@ -6,7 +6,7 @@
 /*   By: mpalkov <mpalkov@student.42barcelo>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 11:34:55 by mpalkov           #+#    #+#             */
-/*   Updated: 2022/08/01 15:16:56 by mpalkov          ###   ########.fr       */
+/*   Updated: 2023/02/15 11:07:21 by mpalkov          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	str = (char *)s;
-	while (str[i] != (char)c && str[i] != 0)
+	while (str[i] != (char)c && str[i] != '\0')
 		i++;
 	if (str[i] == (char)c)
 		return (&str[i]);
 	else
-		return (0);
+		return (NULL);
 }
 
 // The strchr() function locates the first occurrence of c (converted to a char)
@@ -38,3 +38,7 @@ char	*ft_strchr(const char *s, int c)
 // RETURN VALUES
 // The functions strchr() and strrchr() return a pointer to the located charac-
 // ter, or NULL if the character does not appear in the string.
+//
+// This function does the same SEGFAULT as system strchr() if s == NULL.
+// The error handling should be outside of this function
+// as this one does only it's job.
