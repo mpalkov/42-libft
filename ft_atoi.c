@@ -30,9 +30,13 @@ int	ft_atoi(const char *str)
 	if ((str[i] == '+' || str[i] == '-') \
 			&& (str[i + 1] >= '0' && str[i + 1] <= '9'))
 		i++;
-	while (str[i + j] != 0 && str[i + j] >= '0' && '9' >= str[i + j])
+	while (str[i + j] != '\0' && str[i + j] >= '0' && '9' >= str[i + j])
 			j++;
 	while (--j >= 0)
 		c = c * 10 + (str[i++] - '0');
 	return (c * ifnegative);
 }
+
+//Basic atoi.
+//Does not perform checks,
+//outer program should take care about checking the input is correct.
