@@ -103,11 +103,14 @@ all: $(NAME)
 
 -include $(DEPS)
 $(NAME): $(OBJS)
-	ar -crs $(NAME) $(OBJS)
+	@echo "		Creating library: $@"
+	@ar -crs $(NAME) $(OBJS)
+	@echo "		ALL DONE"
 
 $(OBJ_DIR)%.o: %.c
-	mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	@mkdir -p $(dir $@)
+	@echo "		Compiling: $< -> $@"
+	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 clean:
 	$(RM) -r $(OBJ_DIR)
@@ -118,5 +121,3 @@ fclean: clean
 re: fclean all
 
 .PHONY:	fclean, all, clean, re
-
-
