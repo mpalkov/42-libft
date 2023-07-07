@@ -31,7 +31,7 @@ int	ft_atoi(const char *str)
 			&& (str[i + 1] >= '0' && str[i + 1] <= '9'))
 		i++;
 	while (str[i + j] != '\0' && str[i + j] >= '0' && '9' >= str[i + j])
-			j++;
+		j++;
 	while (--j >= 0)
 		c = c * 10 + (str[i++] - '0');
 	return (c * ifnegative);

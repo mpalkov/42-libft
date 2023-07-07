@@ -40,7 +40,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (0);
 	while (s1[start] && ft_charcmp(s1[start], set))
-			start++;
+		start++;
 	while (s1[0] && ft_charcmp(s1[end], set))
 		end--;
 	newstr = ft_substr(s1, start, end - start + 1);

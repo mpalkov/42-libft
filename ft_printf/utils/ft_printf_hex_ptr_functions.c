@@ -20,7 +20,7 @@ int	ft_pf_x(t_vars *vars)
 	if (ft_print_hex_case(vars, (unsigned long long)nbr) == -1)
 		return (-1);
 	return (vars->lastreturn);
-}	
+}
 
 // This is a recursive function. This way I can print number directly
 // in the right order wihout the need to save number by number in a 
